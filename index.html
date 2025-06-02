@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>CodeConnect</title>
+    <script src="scripts.js" type="module"></script>
+</head>
+<body>
+   <aside>
+    <img src="img/Logo.svg" alt="logo">
+    <span>
+        <ul class="links_pagina">
+            <li>
+                <a href="" class="link_especial">Publicar</a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/feed.svg" alt="">
+                    Feed
+                </a>
+            </li>
+            <li>
+               <a href="">
+                   <img src="img/account_circle.svg" alt="">
+                   Perfil
+               </a>
+            </li>
+            <li>
+               <a href="">
+                   <img src="img/info.svg" alt="">
+                   Sobre Nós
+               </a>
+            </li>
+            <li>
+               <a href="">
+                   <img src="img/close.svg" alt="">
+                   Sair
+               </a>
+            </li>
+        </ul>
+    </span>
+   </aside>
+ <main>
+    <section class="conteudo_principal">
+        <div class="upload_area">
+            <div class="img_area">
+                <img src="img/imagem1.png" alt="Imagem de exemplo" class="imagem_index">
+            </div>
+               <button id="carregar">Carregar imagem <img src="img/upload.svg" alt="Upload"></button>
+               <input type="file" name="area_arquivo" id="arquivo" accept="image/">
+               <div class="area_nome_img">
+                   <p class="nome_imagem">img.png</p> 
+                   <img src="img/close.svg" alt="Fechar">
+               </div>
+            
+        </div>
+        <div class="formulario_area">
+           <h2>Novo Projeto</h2>
+           <form action="">
+            <div>
+                <label for="nome">Nome do Projeto</label>
+                    <input type="text" name="nome" id="nome">
+            </div>
+            <div>
+                <label for="descricao">Descrição do Projeto</label>
+                    <input type="text" name="descricao" id="descricao" class="descricao">
+            </div>
+            <div>
+                <label for="tags">Tags</label>
+                    <input type="text" name="tags" id="tags">
+            </div>
+            <ul class="lista_tags" id="lista">
+                
+            </ul>
+            <div class="botoes">
+                <button class="primeiro_botao">Descartar </button>
+                <button class="segundo_botao" id="publicar">Publicar </button>
+            </div>
+           </form>
+        </div>
+    </section>
+ </main>
+</body>
+</html>

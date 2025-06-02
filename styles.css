@@ -1,0 +1,205 @@
+:root{
+--fundo-pagina: #00090E; 
+--cor-texto: #E1E1E1; 
+--cor-primaria: #81FE88; 
+--secundaria: #888888; 
+--tag-cor: #171D1F; 
+--fonte-principal: "Prompt", sans-serif; 
+--itens-background: #171D1F; 
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: var(--fonte-principal);
+}
+body{
+    background-color: var(--fundo-pagina);
+    color: var(--cor-texto);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 3em;
+    width: 100vw;
+    height: 100vh;
+    padding: 2.8em 0;
+}
+aside{
+    background-color: var(--itens-background);
+    height: 100%;
+    padding: 2em 2em;
+    border-radius: 1em;
+    text-align: center;
+}
+.links_pagina{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+    gap: 3em;
+}
+.links_pagina li a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  text-decoration: none;
+  color: var(--secundaria);
+  font-size: 1.5rem;
+}
+.link_especial{
+    color: var(--cor-primaria);
+    border: 1px solid var(--cor-primaria);
+    margin-top: 1em;
+    padding:0.3em 1.5em;
+    border-radius: 6px;
+}
+.link_especial:hover{
+    background-color: var(--cor-primaria);
+    color: var(--itens-background);
+    transition: 1s;
+}
+.conteudo_principal{
+    display: flex;
+    background-color: var(--itens-background);
+    padding: 2.2em;
+    gap: 3em;
+    width: 100%;
+}
+.formulario_area{
+    width: 100%;
+}
+h2{
+    margin-bottom: 1em;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+form input{
+    width: 100%;
+    background-color: var(--secundaria);
+    padding: 1em 1em;
+    border-radius: 4px;
+}
+form div label{
+    font-size: 1.25rem;
+    display: block;
+    margin-bottom: 0.5em;
+}
+form div input{
+    height: 7%;
+}
+.descricao{
+    height: 8em;
+}
+.lista_tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.lista_tags li{
+    display: flex; 
+    gap: 0.8em;
+    background-color: var(--secundaria);
+    color: var(--fundo-pagina);
+    padding: 0.5em 1.2em;
+    border-radius: 4px;
+}
+.botoes{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    gap: 1em;
+}
+.botoes button{
+    padding: 1em 3em;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.primeiro_botao{
+    background-color: var(--itens-background);
+    color: var(--cor-primaria);
+    border: 1px solid var(--cor-primaria);
+    position: relative;
+
+}
+.botoes .primeiro_botao::after{
+    content: "";
+    background-image: url(img/trash.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    position: absolute;
+    margin-left: 1em;
+}
+.botoes .segundo_botao{
+    background-color: var(--itens-background);
+    color: var(--cor-primaria);
+    border: 1px solid var(--cor-primaria);
+}
+.botoes .segundo_botao::after{
+    content: "";
+    background-image: url(img/upload.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    position:absolute;
+    margin-left: 1em;
+}
+#carregar{
+    width: 100%;
+    padding: 1em 1.2em;
+    background-color: var(--itens-background);
+    border: 1px solid var(--secundaria);
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    color: var(--secundaria);
+    border-radius: 8px;
+}
+.imagem_index{
+    width: 422px;
+    height: 100%;
+    object-fit: cover;
+}
+.img_area{
+    height: 368px;
+    padding: 1.5em 1em;
+    background-color: var(--secundaria);
+    border-radius: 8px;
+}
+#carregar{
+    margin: 1em 0 1em 0;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+.area_nome_img{
+    display: flex;
+    gap: 8px;
+    color: var(--secundaria);
+    font-size: 1rem;
+}
+#arquivo{
+    display: none;
+
+}
+#carregar:hover{
+    background-color: var(--cor-primaria);
+    color: var(--itens-background);
+    transition: 1s;
+    cursor: pointer;
+}
+.botoes button:hover{
+    background-color: var(--cor-primaria);
+    color: var(--itens-background);
+    transition: 1s;
+}
