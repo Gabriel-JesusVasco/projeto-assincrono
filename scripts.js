@@ -6,6 +6,8 @@ const caixaTag = document.getElementById("tags");
 const listaTags = document.getElementById("lista");
 const tagsPredefinidas = ["Back-end", "Front-end", "Data-science", "DevOps", "Programação", "Projeto", "Estudo"];
 const botaoPublicar = document.getElementById("publicar");
+const descartar = document.getElementById("descartar");
+const form = document.querySelector("form")
 botaoUpl.addEventListener("click", () => {
     areaUpload.click();
 })
@@ -61,17 +63,49 @@ caixaTag.addEventListener("keypress", async (evento) => {
                     caixaTag.value = "";
                 }
                 else {
-                    alert("Digite uma Tag permitida, tags relacionadas a programação")
+                    alert("Digite uma Tag permitida, tags relacionadas a programação");
                     caixaTag.value = "";
                 }
 
             } catch (erro) {
-                alert("Erro na verificação da tag")
+                alert("Erro na verificação da tag");
             }
         }
     }
 })
-botaoPublicar.addEventListener("click", async(evento)=>{
+async function publicar(nomeUpload, descricao, tagsVisualizacao) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const aprovada = Math.random() > 0.5;
+            if (aprovada) {
+                resolve("Parábens, seu projeto foi públicado!");
+            }
+            else {
+                reject("Que tristeza! Infelizmente seu projeto não foi públicado");
+            }
+        }, 1500);
+    })
+}
+botaoPublicar.addEventListener("click", async (evento) => {
     evento.preventDefault();
-    const nomeUpload = document.getElementById("")
+    const nomeUpload = document.getElementById("nome").value;
+    const descricao = document.getElementById("descricao").value;
+    const tagsVisualizacao = Array.from(listaTags.querySelectorAll("p")).map((tagNova) => tagNova.textContent);
+    console.log(nomeUpload);
+    console.log(descricao);
+    console.log(tagsVisualizacao);
+
+    try {
+        const aprovacaoPublicar = await publicar(nomeUpload, descricao, tagsVisualizacao)
+        alert("Parábens, projeto foi publicado")
+    } catch (erro) {
+        alert(erro)
+    }
+})
+descartar.addEventListener("click", (evento)=>{
+    evento.preventDefault();
+    form.reset();
+    imagem.src = "img/imagem1.png";
+    nomeArquivo.textContent = "img.png";
+    listaTags.innerHTML = "";
 })
